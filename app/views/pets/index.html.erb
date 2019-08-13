@@ -11,7 +11,7 @@
     <% @pets.each do |pet| %>
       <div class="cardindex">
         <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <%= cl_image_tag("sample", width: 400, height: 300, crop: :fill) %>
           <div class="card-trip-infos">
             <div>
               <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
