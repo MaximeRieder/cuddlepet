@@ -8,10 +8,10 @@
 
 <div class="container">
   <div class="cards">
-    <% if @pet.photo.present? %>
-      <% @pets.each do |pet| %>
-        <div class="cardindex">
-          <%= cl_image_tag @pet.photo %>
+    <% @pets.each do |pet| %>
+      <div class="cardindex">
+        <div class="card-trip">
+          <%= cl_image_tag pet.photo %>
           <div class="card-trip-infos">
             <div>
               <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
@@ -20,22 +20,7 @@
             <h2 class="card-trip-pricing"><%= pet.price %> CHF</h2>
           </div>
         </div>
-      <% end %>
-    <% else %>
-      <% @pets.each do |pet| %>
-        <div class="cardindex">
-          <div class="card-trip">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
-                <p><%= pet.description %></p>
-              </div>
-              <h2 class="card-trip-pricing"><%= pet.price %> CHF</h2>
-            </div>
-          </div>
-        </div>
-      <% end %>
+      </div>
     <% end %>
   </div>
 </div>

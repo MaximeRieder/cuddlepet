@@ -3,7 +3,13 @@
   text-align: center;
   color: white;
   position: fixed;
-  bottom: 16px;
+  top: 50px;
   right: 16px;
   z-index: 1000;
+}
+.alert-warning {
+  background: red
+}
+.alert-info {
+  background: green
 }
