@@ -9,9 +9,8 @@
 <div class="container">
   <div class="cards">
     <% @pets.each do |pet| %>
-      <div class="cardindex">
-        <div class="card-trip">
-          <%= cl_image_tag("sample", width: 400, height: 300, crop: :fill) %>
+      <div class="cardindex"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @pet.photo, height: 300, width: 400, crop: :fill %>')">
           <div class="card-trip-infos">
             <div>
               <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
