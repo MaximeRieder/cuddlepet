@@ -6,6 +6,7 @@ class PetsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+
   test "should get show" do
     get pets_show_url
     assert_response :success
@@ -21,4 +22,3 @@ class PetsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-end
