@@ -1,4 +1,14 @@
-.card-category {
+.home-banner {
+  background-image: asset-url('banner.jpeg');
+  background-size: cover;
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
+  margin-bottom: 50px
+}
+
+.show-banner {
   background-size: cover;
   background-position: center;
   height: 500px;
