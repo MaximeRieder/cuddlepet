@@ -5,12 +5,11 @@
 <div class="grid-container">
   <div class="card-product">
     <h2><%= @pet.name %></h2>
-    <p><%= @pet.description %></p>
-    <p><%= @pet.user.email %></p>
+    <p>description: <%= @pet.description %></p>
+    <p>owner: <%= @pet.user.email %></p>
   </div>
   <div class="box">
-    <p><%= @pet.price %> CHF</p>
-    <div class="btn btn-primary">book</div>
+    <p><i class="fas fa-paw"> <%= @pet.price %> CHF</i></p>
+    <div class="btn btn-primary">Rent-animal</div>
   </div>
-
 </div>
