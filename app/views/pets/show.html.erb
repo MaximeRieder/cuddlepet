@@ -1,0 +1,10 @@
+<img src=""
+     id="romain" height="200" alt="Romain Paillard" />
+<h1><%= @pet.name %></h1>
+<%= @pets.each do |pet|%>
+ <h4><%= pet.description%></h4>
+ <h4><%= pet.user_id %></h4>
+
+<div> <%= @pet.price %>
+<div class="btn btn-primary">book</div>
+</div>
