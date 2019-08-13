@@ -8,22 +8,24 @@
 
 <div class="container">
   <div class="cards">
-    <% @pets.each do |pet| %>
-      <% if pet.photo.present? %>
-        <div class="cardindex"
-          style="background-image: url('<%= cl_image_tag pet.photo %>')">
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
-                <p><%= pet.description %></p>
-              </div>
-              <h2 class="card-trip-pricing"><%= pet.price %> CHF</h2>
+    <% if @pet.photo.present? %>
+      <% @pets.each do |pet| %>
+        <div class="cardindex">
+          <%= cl_image_tag @pet.photo %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
+              <p><%= pet.description %></p>
             </div>
+            <h2 class="card-trip-pricing"><%= pet.price %> CHF</h2>
           </div>
         </div>
-      <% else %>
-        <div class="cardindex"
-          style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1555329947-806474115762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80)">
+      <% end %>
+    <% else %>
+      <% @pets.each do |pet| %>
+        <div class="cardindex">
+          <div class="card-trip">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
             <div class="card-trip-infos">
               <div>
                 <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
