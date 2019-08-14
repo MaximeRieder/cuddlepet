@@ -1,11 +1,15 @@
 import "bootstrap";
 
-import { initUpdateNavbarOnScroll } from '../components/navbar';
-initUpdateNavbarOnScroll();
-
-
 import { loadDynamicBannerText } from '../components/banner';
+
+import 'mapbox-gl/dist/mapbox-gl.css';
+
+import { initMapbox } from '../plugins/init_mapbox';
+
+
 loadDynamicBannerText();
+initMapbox();
+
 
 // if ((document).ready(onPage1Load)) {
 //   import { loadDynamicBannerText } from '../components/banner'
