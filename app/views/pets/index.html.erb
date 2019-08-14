@@ -11,7 +11,7 @@
     <% @pets.each do |pet| %>
       <div class="cardindex">
         <div class="card-trip">
-          <%= cl_image_tag pet.photo %>
+          <%= cl_image_tag pet.get_photo %>
           <div class="card-trip-infos">
             <div>
               <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
@@ -24,4 +24,3 @@
     <% end %>
   </div>
 </div>
-
