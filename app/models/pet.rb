@@ -7,7 +7,7 @@ class Pet < ApplicationRecord
     if photo.present?
       photo
     else
-      "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"
+      "http://res.cloudinary.com/dvvefb7if/image/upload/v1565776539/petouts_kgxno1.jpg"
     end
   end
 end
