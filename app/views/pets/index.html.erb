@@ -1,27 +1,29 @@
-<div class="home-banner">
-  <h1>Cuddle Pet</h1>
-  <p>
-    <span id="banner-typed-text"></span>
-  </p>
-</div>
-
-
 <div class="container">
-  <div class="cards">
-    <% @pets.each do |pet| %>
-      <div class="cardindex">
-        <div class="card-trip">
-          <%= cl_image_tag pet.photo %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
-              <p><%= pet.description %></p>
+  <div class="home-banner">
+    <h1>Cuddle Pet</h1>
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
+  </div>
+
+
+  <div class="container1">
+    <div class="cards">
+      <% @pets.each do |pet| %>
+        <div class="cardindex">
+          <div class="card-trip">
+            <%= cl_image_tag pet.get_photo %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
+                <p><%= pet.description %></p>
+              </div>
+              <h2 class="card-trip-pricing"><%= pet.price %> CHF</h2>
             </div>
-            <h2 class="card-trip-pricing"><%= pet.price %> CHF</h2>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
