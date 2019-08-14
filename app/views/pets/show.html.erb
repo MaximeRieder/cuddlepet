@@ -1,15 +1,55 @@
-<div class="show-banner" id="dog-love" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1508675801627-066ac4346a61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1490&q=80)">
+<div class="container">
+  <div class="show-banner" id="dog-love" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1508675801627-066ac4346a61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1490&q=80)">
 </div>
 
 
 <div class="grid-container">
   <div class="container-details">
-    <h2><%= @pet.name %></h2>
+    <h2><%= @pet.name.capitalize %></h2>
     <p>description: <%= @pet.description %></p>
     <p>owner: <%= @pet.user.email %></p>
+    <p>1. Have a family pow-wow.
+
+    A dog is a big commitment, so before you take the plunge, make sure you’re all together on wanting this newest member of the family. Then decide who’s going to be the primary caretaker–otherwise you’ll spend lots of time arguing while your new dog stares at his empty food bowl. To avoid confusing the pup, hammer out the house rules ahead of time (will the dog be allowed on the bed? On the couch? Where will the dog sleep? Are any rooms of the house permanently off-limits?).
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#0qMOoTSqdZUxKO3R.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
+    </p>
   </div>
+
   <div class="box">
-    <p><i class="fas fa-paw"> <%= @pet.price %> CHF</i></p>
-    <div class="btn btn-primary">Rent-animal</div>
+    <h3><i class="fas fa-paw"> <%= @pet.price %> CHF</i></h3>
+      <%= simple_form_for :search, method: "get" do |f| %>
+      <%= f.input :starts_at, input_html: {class: "datepicker", id: "range_start"} %>
+      <%= f.input :ends_at, input_html: {class: "datepicker", id: "range_end"} %>
+      <%= f.button :submit, "Rent-animal", class: "btn btn-primary" %>
+      <% end %>
   </div>
 </div>
+</div>
+
+
