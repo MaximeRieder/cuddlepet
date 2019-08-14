@@ -1,5 +1,5 @@
 .home-banner {
-  background-image: asset-url('banner.jpeg');
+  background-image: asset-url('doglove.jpeg');
   background-size: cover;
   height: 100vh;
   color: #eee;
@@ -23,3 +23,18 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.style-banner{
+  width: 500px;
+  padding: 20px;
+  border-radius: 15px;
+  margin: auto;
+  color: white;
+  h1{
+
+    font-size: 52pt;
+  }
+}
+
+
+
