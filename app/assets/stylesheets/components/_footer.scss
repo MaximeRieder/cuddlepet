@@ -1,23 +1,24 @@
 .footer {
-  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);  display: flex;
+  display: flex;
+  background: white;
   align-items: center;
   justify-content: space-between;
-  height: 200px;
-  padding: 0px 100px;
+  height: 100px;
+  padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   margin-top: 100px;
+  position: fixed-bottom
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 a {
-  color: #e7e8ea;
+  color: black;
 }
 .footer-links a {
-  color: #f1f3f5;
+  color: black;
   opacity: 0.15;
-  text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }

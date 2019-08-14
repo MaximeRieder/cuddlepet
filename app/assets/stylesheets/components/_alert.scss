@@ -6,10 +6,12 @@
   top: 60px;
   right: 16px;
   z-index: 10;
+  border: 0;
+  border-radius: 25px;
 }
 .alert-warning {
-  background: red
+  background: linear-gradient(to top, #ffc6c4, #ff958c, #ff5f50, #fb0202, #fb0202);
 }
 .alert-info {
-  background: green
+  background-image: radial-gradient(circle, #1af604, #1af604, #76f962);
 }
