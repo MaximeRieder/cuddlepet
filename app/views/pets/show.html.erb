@@ -1,28 +1,17 @@
 
-
-
-
-
-
 <div class="container">
   <%= cl_image_tag @pet.get_photo, {class: "img_cover"} %>
+
+
+
   <div class="grid-container">
     <div class="container-details">
+
 
       <h2><%= @pet.name.capitalize %></h2>
       <p>description: <%= @pet.description %></p>
       <p>owner: <%= @pet.user.email %></p>
       <p><%= @pet.address %></p>
-
-      <p>1. Have a family pow-wow.
-
-      A dog is a big commitment, so before you take the plunge, make sure you’re all together on wanting this newest member of the family. Then decide who’s going to be the primary caretaker–otherwise you’ll spend lots of time arguing while your new dog stares at his empty food bowl. To avoid confusing the pup, hammer out the house rules ahead of time (will the dog be allowed on the bed? On the couch? Where will the dog sleep? Are any rooms of the house permanently off-limits?).
-      Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#0qMOoTSqdZUxKO3R.99
-      Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
-      Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
-      Read more at https://dogtime.com/dog-health/general/262-adults-bringing-home#805yoqsYCdOQmJvx.99
-      Read more at https://dogtime.com/dog-health/
-      </p>
 
     </div>
 
@@ -31,19 +20,17 @@
         <%= render 'shared/booking_form_new' %>
     </div>
   </div>
+
+
+  <div id="map"
+    style="width: 100%;
+    height: 600px;
+    border-radius: 5px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
 </div>
-
-
-
-<div id="map"
-  style="width: 100%;
-  height: 600px;
-  border-radius: 5px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-</div>
-
 
 
 

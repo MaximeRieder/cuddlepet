@@ -8,15 +8,15 @@
 Pet.destroy_all
 User.destroy_all
 users_list = [
-  [ "max@yahoo.com", "81831000", 1 ],
-  [ "alex@gmail.com", "65447374", 2 ],
-  [ "ejdat@hotmail.com", "10839905", 3 ]
+  [ "max@yahoo.com", "81831000", 1000 ],
+  [ "alex@gmail.com", "65447374", 1001 ],
+  [ "ejdat@hotmail.com", "10839905", 1002 ]
 ]
 
 pets_list = [
-  ["cat", "black and white", 50, 1, "Rue de l'Industrie, Bussigny"],
-  ["dog", "bulldog anglais", 100, 2, "Chemin des Jonchets, Bussigny"],
-  ["dolphin", "blue", 1000, 3, "Avenue du 14-Avril, Crissier"]
+  ["cat", "black and white", 50, 1000, "Rue de l'Industrie, Bussigny"],
+  ["dog", "bulldog anglais", 100, 1001, "Chemin des Jonchets, Bussigny"],
+  ["dolphin", "blue", 1000, 1002, "Avenue du 14-Avril, Crissier"]
 ]
 
 users_list.each do |email, password, id|
