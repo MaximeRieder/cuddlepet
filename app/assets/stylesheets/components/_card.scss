@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;
+  margin: 20px 0;
 }
 
 // Smallest device
@@ -113,8 +114,6 @@
   width: 40px;
 }
 
-.card-trip-infos {
+.card-over:hover {
   text-decoration: none;
-  color: black;
 }
-
