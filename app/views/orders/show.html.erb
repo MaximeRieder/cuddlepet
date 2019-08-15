@@ -1,7 +1,23 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <h1>Add new order for</h1>
+  <h1> BOOKING CONFIRMED! <i class="fas fa-paw"></i></h1>
+
+<div class="card">
+  <h4> Start rental : <%= @order.starts_at %></h4>
+  <h4> End rental : <%= @order.ends_at  %></h4>
+  <h4> Total price : <%= @order.pet.price %></h4>
+
+  <h4> Owner details : <%= @order.user.email %></h4>
+    <div class="terms">
+      <h5>Terms of Service</h5>
+      <p>
+        Last Updated: January 21, 2019
+
+        Thank you for using cuddle-pet!
+
+        These Terms constitute a legally binding agreement ("Agreement") between you and cuddle-pet (as defined below) governing      your access to and use of the cuddle-pet website, including any subdomains thereof, and any other websites through which cuddle-pet makes its services available (collectively, "Site"), our mobile, tablet and other smart device applications, and application program interfaces (collectively, "Application") and all associated services (collectively, "cuddle-pet Services"). The Site, Application and cuddle-pet Services together are hereinafter collectively referred to as the “cuddle-pet Platform”. Our Host Guarantee Terms, Japan Host Insurance Terms, Guest Refund Policy, Nondiscrimination Policy and other Policies applicable to your use of the cuddle-pet Platform are incorporated by reference into this Agreement.
+
+        When these Terms mention “cuddle-pet,” “we,” “us,” or “our,” it refers to the cuddle-pet company you are contracting with.      Your contracting entity will generally be determined based on your country of residence or establishment.
+      </p>
 
     </div>
   </div>

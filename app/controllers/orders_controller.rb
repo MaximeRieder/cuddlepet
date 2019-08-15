@@ -26,4 +26,5 @@ class OrdersController < ApplicationController
     params.require(:order).permit(:starts_at, :ends_at, :final_price, :user_id, :pet_id)
   end
 
+
 end
