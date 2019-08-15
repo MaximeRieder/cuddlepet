@@ -26,11 +26,7 @@
 
   <div class="box">
     <h3><i class="fas fa-paw"> <%= @pet.price %> CHF</i></h3>
-      <%= simple_form_for :search, method: "get" do |f| %>
-      <%= f.input :starts_at, input_html: {class: "datepicker", id: "range_start"} %>
-      <%= f.input :ends_at, input_html: {class: "datepicker", id: "range_end"} %>
-      <%= link_to "test", new_pet_order_path(@pet) %>
-      <% end %>
+      <%= render 'shared/booking_form_new' %>
   </div>
 </div>
 

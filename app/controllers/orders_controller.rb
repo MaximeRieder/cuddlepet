@@ -5,16 +5,15 @@ class OrdersController < ApplicationController
   end
 
   def create
+    raise
     @pet = Pet.find(params[:pet_id])
-    @users = User.find(params[:order][:user])
+    @users = Tag.find(params[:order][:user])
     @users.each do |user|
-      @order = Order.new
+      order = Order.new
       order.pet = @pet
       order.user = user
       order.save
     end
     redirect_to pets_path
   end
-
 end
-
