@@ -1,7 +1,7 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 100px;
+  grid-gap: 50px;
 }
 
 // Smallest device
@@ -51,7 +51,7 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   filter: brightness(1.75);
 }
 
@@ -65,13 +65,18 @@
   font-size: 24px;
   font-weight: bold;
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.card-trip:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 .card-trip > img {
@@ -108,7 +113,7 @@
   width: 40px;
 }
 
-.card-trip-infos a {
+.card-trip-infos {
   text-decoration: none;
   color: black;
 }
