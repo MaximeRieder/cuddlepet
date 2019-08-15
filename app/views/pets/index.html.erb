@@ -8,21 +8,21 @@
   </div>
 
 <div class="container">
+  <h1>Available Pets:</h1>
     <div class="cards">
       <% @pets.each do |pet| %>
-      <%= link_to pet_path(pet) do %>
-        <div class="cardindex">
-          <div class="card-trip">
-            <%= cl_image_tag pet.get_photo %>
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= pet.name.capitalize %></h2>
-                <p><%= pet.description %></p>
+        <%= link_to pet_path(pet), {class: "card-over"} do %>
+          <div class="cardindex">
+            <div class="card-trip">
+              <%= cl_image_tag pet.get_photo %>
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= pet.name.capitalize %></h2>
+                </div>
+                <h2 class="card-trip-pricing"><%= pet.price %> CHF</h2>
               </div>
-              <h2 class="card-trip-pricing"><%= pet.price %> CHF</h2>
             </div>
           </div>
-        </div>
         <% end %>
       <% end %>
     </div>
