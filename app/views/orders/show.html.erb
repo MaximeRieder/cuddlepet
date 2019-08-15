@@ -1,12 +1,12 @@
 <div class="container">
   <h1> BOOKING CONFIRMED! <i class="fas fa-paw"></i></h1>
 
-<div class="card">
-  <h4> Start rental : <%= @order.starts_at %></h4>
-  <h4> End rental : <%= @order.ends_at  %></h4>
-  <h4> Total price : <%= @order.pet.price %></h4>
+  <div class="card">
+    <h4> Start rental : <%= @order.starts_at %></h4>
+    <h4> End rental : <%= @order.ends_at  %></h4>
+    <h4> Total price : <%= @order.pet.price %></h4>
 
-  <h4> Owner details : <%= @order.user.email %></h4>
+    <h4> Owner details : <%= @order.user.email %></h4>
     <div class="terms">
       <h5>Terms of Service</h5>
       <p>
