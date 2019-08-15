@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+
   def new
     @pet = Pet.find(params[:pet_id])
     @order = @pet.orders.build
@@ -6,13 +7,23 @@ class OrdersController < ApplicationController
 
   def create
     # calculer le prix
-    Order.create(
-      starts_at: Date.new(params[:order]["starts_at(1i)"].to_i,params[:order]["starts_at(2i)"].to_i,params[:order]["starts_at(3i)"].to_i),
-      ends_at: Date.new(params[:order]["ends_at(1i)"].to_i,params[:order]["ends_at(2i)"].to_i,params[:order]["ends_at(3i)"].to_i),
-      final_price: 0,
-      user_id: current_user.id,
-      pet_id: params[:pet_id]
-    )
-    # redirect vers la show de l'order ou l'index des orders
+    @order = Order.new(orders_params)
+    @order.pet = Pet.find(params[:pet_id])
+    @order.user = current_user
+    if @order.save
+      redirect_to pet_order_path(@order.pet, @order)
+    end
   end
+
+
+  def show
+
+  end
+
+  private
+
+  def orders_params
+    params.require(:order).permit(:starts_at, :ends_at, :final_price, :user_id, :pet_id)
+  end
+
 end
