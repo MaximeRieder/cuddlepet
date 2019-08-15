@@ -1,7 +1,8 @@
 
 <div class="container">
-
   <%= cl_image_tag @pet.get_photo, {class: "img_cover"} %>
+</div>
+
 
 <div class="grid-container">
   <div class="container-details">
@@ -28,7 +29,7 @@
       <%= simple_form_for :search, method: "get" do |f| %>
       <%= f.input :starts_at, input_html: {class: "datepicker", id: "range_start"} %>
       <%= f.input :ends_at, input_html: {class: "datepicker", id: "range_end"} %>
-      <%= f.button :submit, "Rent-animal", class: "btn btn-primary" %>
+      <%= link_to "test", new_pet_order_path(@pet) %>
       <% end %>
   </div>
 </div>
@@ -42,6 +43,8 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 </div>
+
+
 
 
 
