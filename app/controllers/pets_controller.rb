@@ -6,6 +6,7 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
     @pets = Pet.geocoded
+    @order = Order.new
 
     @markers = @pets.map do |pet|
       {
