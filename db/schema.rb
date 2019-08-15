@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_14_090844) do
+ActiveRecord::Schema.define(version: 2019_08_15_123632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "orders", force: :cascade do |t|
-    t.date "pick_up_date"
-    t.date "drop_off_date"
+    t.date "starts_at"
+    t.date "ends_at"
     t.integer "final_price"
     t.bigint "user_id"
     t.bigint "pet_id"

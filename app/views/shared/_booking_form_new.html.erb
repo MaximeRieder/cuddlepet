@@ -1,0 +1,5 @@
+<%= simple_form_for [@pet, @order] do |f| %>
+  <%= f.input :starts_at, input_html: {class: "datepicker", id: "range_start"} %>
+  <%= f.input :ends_at, input_html: {class: "datepicker", id: "range_end"} %>
+  <%= f.submit "Book", class: "btn btn-primary" %>
+<% end %>
