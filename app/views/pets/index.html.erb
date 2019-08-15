@@ -1,5 +1,4 @@
-<div class="container">
-  <div class="home-banner">
+<div class="home-banner">
     <div class="style-banner">
       <h1>Cuddle Pet</h1>
       <p>
@@ -8,24 +7,25 @@
     </div>
   </div>
 
+<div class="container">
 
-  <div class="container1">
     <div class="cards">
       <% @pets.each do |pet| %>
+      <%= link_to pet_path(pet) do %>
         <div class="cardindex">
           <div class="card-trip">
             <%= cl_image_tag pet.get_photo %>
             <div class="card-trip-infos">
               <div>
-                <h2><%= link_to pet.name.capitalize, pet_path(pet) %></h2>
+                <h2><%= pet.name.capitalize %></h2>
                 <p><%= pet.description %></p>
               </div>
               <h2 class="card-trip-pricing"><%= pet.price %> CHF</h2>
             </div>
           </div>
         </div>
+        <% end %>
       <% end %>
     </div>
-  </div>
 </div>
 
