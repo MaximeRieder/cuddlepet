@@ -5,16 +5,13 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
-    @pets = Pet.geocoded
+    @pet_marker = Pet.geocoded.find(params[:id])
     @order = Order.new
-
-    @markers = @pets.map do |pet|
-      {
-        lat: pet.latitude,
-        lng: pet.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { pet: pet })
-      }
-    end
+    @markers = [{ lat: @pet_marker.latitude,
+                  lng: @pet_marker.longitude,
+                  infoWindow: render_to_string(partial: "info_window",
+                  locals: { pet: @pet })
+                }]
   end
 
   def new
