@@ -6,9 +6,9 @@
       </p>
     </div>
   </div>
+<h1>Available Pets:</h1>
+<div class="grid-container2">
 
-<div class="container">
-  <h1>Available Pets:</h1>
     <div class="cards">
       <% @pets.each do |pet| %>
         <%= link_to pet_path(pet), {class: "card-over"} do %>
@@ -26,5 +26,17 @@
         <% end %>
       <% end %>
     </div>
+
+    <div id="map"
+    style="width: 100%;
+    height: 600px;
+    border-radius: 5px;
+    position: sticky;
+    top: 0;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+
 </div>
+
 

@@ -1,6 +1,16 @@
 class PetsController < ApplicationController
   def index
     @pets = Pet.all
+    @pets = Pet.geocoded
+
+    @markers = @pets.map do |pet|
+      {
+        lat: pet.latitude,
+        lng: pet.longitude,
+        infoWindow: render_to_string(partial: "info_window",
+        locals: { pet: pet })
+      }
+    end
   end
 
   def show

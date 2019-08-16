@@ -1,12 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: white;
+  background-color: transparent;
   transition: 0.5s background-color ease;
   padding: 5px 13px;
 }
 
-.navbar-lewagon-white {
-  background: linear-gradient(to right, #27292c, #4f5557, #7b8584, #afb8b2, #e9ece2);}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -25,7 +23,8 @@
 }
 
 .nav-item:hover {
-  opacity: 1;
+  border-bottom: 2px solid white;
+  color: white;
 }
 
 .dropdown-menu {
@@ -37,4 +36,8 @@
 
 .nav-items a:hover {
   background-color: rgb(240, 240, 240);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
 }
