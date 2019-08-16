@@ -1,14 +1,33 @@
 <div class="container">
-  <h1> BOOKING CONFIRMED! <i class="fas fa-paw"></i></h1>
+  <div class="booking">
+    <h1> BOOKING CONFIRMED! <i class="fas fa-paw"></i></h1>
+  </div>
 
   <div class="card">
-    <h4> Start rental : <%= @order.starts_at %></h4>
-    <h4> End rental : <%= @order.ends_at  %></h4>
-    <h4> Total price : <%= @order.pet.price %></h4>
+    <div class="dateorder">
+      <h4> Start rental  <%= @order.starts_at %></h4>
+      <h4> End rental  <%= @order.ends_at  %></h4>
+    </div>
 
-    <h4> Owner details : <%= @order.user.email %></h4>
+    <div class="price">
+      <h4> Total price : <%= @order.pet.price %> CHF</h4>
+    </div>
+
+    <div class="info">
+      <div class="owner">
+        <h4> Owner details </h4>
+      </div>
+
+     <div class="owner-details">
+        <h5> <i class="fas fa-user" ></i> <%= @order.user.email %></h5>
+        <h7><i class="fas fa-water" > </i> Don't forget that an animal needs to drink a lot of water.</h7>
+      </div>
+
+    </div>
+
+
     <div class="terms">
-      <h5>Terms of Service</h5>
+      <h6>Terms of Service</h6>
       <p>
         Last Updated: January 21, 2019
 
@@ -18,8 +37,9 @@
 
         When these Terms mention “cuddle-pet,” “we,” “us,” or “our,” it refers to the cuddle-pet company you are contracting with.      Your contracting entity will generally be determined based on your country of residence or establishment.
       </p>
-      <%= link_to "Home Page", root_path %>
-
+      <div>
+         <%= link_to "Home Page", root_path, class: "btn btn-primary"%>
+      </div>
     </div>
   </div>
 </div>
