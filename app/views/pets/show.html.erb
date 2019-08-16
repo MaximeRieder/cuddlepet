@@ -9,9 +9,12 @@
 
 
       <h2><%= @pet.name.capitalize %></h2>
-      <p>description: <%= @pet.description %></p>
-      <p>owner: <%= @pet.user.email %></p>
-      <p><%= @pet.address %></p>
+      <p><%= @pet.description %></p>
+
+      <div class="details">
+        <p><i class="fas fa-user"></i> <%= @pet.user.email %></p>
+        <p><i class="fas fa-map-marked-alt"></i><%= @pet.address %></p>
+      </div>
 
     </div>
 
