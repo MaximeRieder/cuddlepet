@@ -8,8 +8,15 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
-initUpdateNavbarOnScroll();
 
+import { initUpdateNavbarOnScrolllink } from '../components/navbar';
+
+import { initUpdateNavbarOnScrollmenu } from '../components/navbar';
+
+
+initUpdateNavbarOnScrolllink();
+initUpdateNavbarOnScrollmenu();
+initUpdateNavbarOnScroll();
 loadDynamicBannerText();
 initMapbox();
 
